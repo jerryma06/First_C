@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+#define VOLUMN_FACTOR (4.0f / 3.0f)
+#define PI 3.14159f
+
+
+int main (void)
+{
+	float radius;
+	float volumn;
+	
+	printf ("Enter radius of the sphere:  ");
+	scanf ("%f",&radius);
+	
+	volumn = (VOLUMN_FACTOR * PI * radius * radius * radius);
+	printf("Volumn of the sphere with 10m radius: %.1f \n", volumn);
+	
+
+	return 0;
+}
