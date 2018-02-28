@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+/* enter loan number, interst rate, and monthly playment; calculate remaining balance after 1st, 2nd and 3rd payment */
+
+int main(void) 
+{	
+	float loan_amount, monthly_payment, interest_rate, rb_1, rb_2, rb_3;
+	
+	printf("Enter an initial loan amount: ");
+	scanf ("%f", &loan_amount);
+	printf("Enter an interest rate: ");
+	scanf ("%f", &interest_rate);
+	printf("Enter monthly payment: ");
+	scanf ("%f", &monthly_payment);
+	
+	rb_1 = loan_amount - monthly_payment + loan_amount * (interest_rate/100/12);
+	rb_2 = rb_1 - monthly_payment + rb_1 * (interest_rate/100/12);
+	rb_3 = rb_2 - monthly_payment + rb_2 * (interest_rate/100/12);
+	
+	printf ("Balance remaining after first payment: $%.2f\n", rb_1);
+	printf ("Balance remaining after second payment: $%.2f\n", rb_2);
+	printf ("Balance remaining after third payment: $%.2f\n", rb_3);
+	
+	return 0;
+}
